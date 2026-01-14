@@ -11,19 +11,35 @@ struct ContentView: View {
     @State private var message = "I am a Programmer!"
     var body: some View {
         VStack {
+            Spacer()
+            
             Image(systemName: "swift")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.orange)
+                .frame(width:200, alignment:200)
+            
             Text(message)
                 .font(Font.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundStyle(.red)
-            Button("Click me") {
-                message = "Awesome"
+                .fontWeight(.ultraLight)
+                .foregroundStyle(.black)
+            
+            Spacer()
+            
+            HStack {
+                Button("Awesome!") {
+                    message = "Awesome!"
+                }
+               
+                Button("Great!"){
+                       message = "Great!"
+                }
             }
-               }
-               .padding()
+            .buttonStyle(.borderedProminent)
+            .font(Font.title2)
+            .tint(.orange)
+        }
+            .padding()
         
     }
 }
