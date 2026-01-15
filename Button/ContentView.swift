@@ -17,7 +17,7 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.orange)
-                .frame(width:200, alignment:200)
+                .frame(width: 200, height: 200)
             
             Text(message)
                 .font(Font.largeTitle)
